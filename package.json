@@ -1,0 +1,69 @@
+{
+  "name": "pterodactyl-advanced-themes",
+  "version": "1.0.0",
+  "description": "Advanced themes for Pterodactyl Panel with modern UI components and animations",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build:dark && npm run build:light",
+    "build:dark": "npm run minify:dark && npm run optimize:dark",
+    "build:light": "npm run minify:light && npm run optimize:light",
+    "minify:dark": "cleancss -o themes/advanced-dark/theme.min.css themes/advanced-dark/theme.css themes/advanced-dark/overrides.css",
+    "minify:light": "cleancss -o themes/advanced-light/theme.min.css themes/advanced-light/theme.css themes/advanced-light/overrides.css",
+    "optimize:dark": "postcss themes/advanced-dark/theme.min.css -o themes/advanced-dark/theme.optimized.css",
+    "optimize:light": "postcss themes/advanced-light/theme.min.css -o themes/advanced-light/theme.optimized.css",
+    "watch": "npm run watch:dark & npm run watch:light",
+    "watch:dark": "nodemon --watch themes/advanced-dark --ext css --exec \"npm run build:dark\"",
+    "watch:light": "nodemon --watch themes/advanced-light --ext css --exec \"npm run build:light\"",
+    "lint": "stylelint themes/**/*.css",
+    "lint:fix": "stylelint themes/**/*.css --fix",
+    "test": "npm run lint && npm run build",
+    "install:themes": "node scripts/install.js",
+    "uninstall:themes": "node scripts/uninstall.js"
+  },
+  "keywords": [
+    "pterodactyl",
+    "panel",
+    "theme",
+    "css",
+    "ui",
+    "design",
+    "dark-theme",
+    "light-theme",
+    "modern",
+    "responsive"
+  ],
+  "author": "Pterodactyl Advanced Themes",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-repo/pterodactyl-advanced-themes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-repo/pterodactyl-advanced-themes/issues"
+  },
+  "homepage": "https://github.com/your-repo/pterodactyl-advanced-themes#readme",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.2",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
+    "postcss-preset-env": "^9.3.0",
+    "autoprefixer": "^10.4.16",
+    "stylelint": "^15.11.0",
+    "stylelint-config-standard": "^34.0.0",
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "files": [
+    "themes/",
+    "README.md",
+    "install.sh",
+    "scripts/"
+  ],
+  "directories": {
+    "themes": "themes/",
+    "scripts": "scripts/"
+  }
+}
