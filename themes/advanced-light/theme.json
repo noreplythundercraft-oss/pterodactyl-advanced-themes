@@ -1,0 +1,50 @@
+{
+  "name": "Advanced Light Theme",
+  "version": "1.0.0",
+  "description": "A modern, advanced light theme for Pterodactyl Panel with enhanced UI components and animations",
+  "author": "Pterodactyl Advanced Themes",
+  "license": "MIT",
+  "preview": "preview.png",
+  "theme": {
+    "colors": {
+      "primary": "#6366f1",
+      "secondary": "#8b5cf6",
+      "success": "#10b981",
+      "warning": "#f59e0b",
+      "error": "#ef4444",
+      "info": "#3b82f6"
+    },
+    "backgrounds": {
+      "primary": "#ffffff",
+      "secondary": "#f8fafc",
+      "tertiary": "#f1f5f9",
+      "card": "#ffffff",
+      "hover": "#f1f5f9"
+    },
+    "text": {
+      "primary": "#1e293b",
+      "secondary": "#64748b",
+      "muted": "#94a3b8",
+      "accent": "#f59e0b"
+    },
+    "borders": {
+      "primary": "#e2e8f0",
+      "secondary": "#cbd5e1",
+      "accent": "#6366f1"
+    }
+  },
+  "features": [
+    "Modern gradient designs",
+    "Smooth animations and transitions",
+    "Enhanced button styles",
+    "Custom status indicators",
+    "Glass morphism effects",
+    "Responsive design",
+    "Custom scrollbars",
+    "Loading animations"
+  ],
+  "compatibility": {
+    "pterodactyl": ">=1.0.0",
+    "browser": "modern"
+  }
+}
